@@ -29,6 +29,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        sk_ignore_modifiers: sk_ignore_modifiers {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_IGNORE_MODIFIERS";
+            bindings = <&cycle_amethyst>;
+            #binding-cells = <1>;
+            ignore-modifiers;
+            release-after-ms = <1000>;
+        };
     };
 
     macros {
